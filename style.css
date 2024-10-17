@@ -1,0 +1,103 @@
+/* Genel stil */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+
+/* Kart yapısı */
+.container {
+  width: 400px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: #2e2e2e;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+/* Form stili */
+.form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+/* Placeholder rengini beyaz yap */
+.form-control::placeholder {
+  color: #fff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  background-color: #444;
+}
+
+.btn {
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Arka yüz (Kayıt formu) */
+.register-form {
+  transform: rotateY(180deg);
+}
+
+/* Link */
+#link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#link a:hover {
+  text-decoration: underline;
+}
